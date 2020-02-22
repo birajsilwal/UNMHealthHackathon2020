@@ -15,8 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".elevatorButton"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+<!--        <activity android:name=".elevatorButton"-->
+<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>-->
         <activity android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>

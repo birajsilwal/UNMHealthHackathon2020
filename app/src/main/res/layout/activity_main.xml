@@ -8,20 +8,6 @@
     tools:context=".MainActivity">
 
 
-<!--    <Button-->
-<!--        android:id="@+id/elevatorButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_marginTop="117dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:background="@drawable/custom_button_border_main"-->
-<!--        android:padding="10dp"-->
-<!--        android:text="Elevator Buttons"-->
-<!--        android:textSize="25sp"/>-->
-
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -45,7 +31,6 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:text="Example App"
                 android:layout_below="@+id/button1"
