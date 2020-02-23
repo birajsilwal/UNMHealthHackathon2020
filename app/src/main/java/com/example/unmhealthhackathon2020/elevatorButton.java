@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 public class elevatorButton extends Activity implements OnClickListener {
 
-    Button i1;
+    Button i1, one, two, three, four;
     ImageView ivBack;
     TextView t1;
 
@@ -47,23 +47,62 @@ public class elevatorButton extends Activity implements OnClickListener {
             }
         });
 
-        try {setw();} catch (Exception e) {}
+        try {
+            setAction();} catch (Exception e) {}
     }
 
     @SuppressLint("ClickableViewAccessibility")
-    private void setw() throws IOException {
-        t1=(TextView)findViewById(R.id.textView1);
+    private void setAction() throws IOException {
+        t1 = findViewById(R.id.textView1);
         bluetooth_connect_device();
 
-        i1=(Button)findViewById(R.id.button1);
+        i1 = findViewById(R.id.button1);
+        one = findViewById(R.id.one);
+        two = findViewById(R.id.two);
+        three = findViewById(R.id.three);
+        four = findViewById(R.id.four);
 
-        i1.setOnTouchListener(new View.OnTouchListener()
-        {   @Override
-        public boolean onTouch(View v, MotionEvent event){
-            if(event.getAction() == MotionEvent.ACTION_DOWN) {led_on_off("f");}
-            if(event.getAction() == MotionEvent.ACTION_UP){led_on_off("b");}
-            return true;}
+        i1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_DOWN) { getInput("f"); }
+                if(event.getAction() == MotionEvent.ACTION_UP) { getInput("b"); }
+                return true;
+            }
         });
+
+        one.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) { getInput("one"); }
+                return true;
+            }
+        });
+
+        two.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) { getInput("two"); }
+                return true;
+            }
+        });
+
+        three.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) { getInput("three"); }
+                return true;
+            }
+        });
+
+        four.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction() == MotionEvent.ACTION_BUTTON_PRESS) { getInput("four"); }
+                return true;
+            }
+        });
+
     }
 
     private void bluetooth_connect_device() throws IOException {
@@ -99,10 +138,10 @@ public class elevatorButton extends Activity implements OnClickListener {
         }
     }
 
-    private void led_on_off(String i) {
+    private void getInput(String i) {
         try {
             if (btSocket!=null) {
-                btSocket.getOutputStream().write(i.toString().getBytes());
+                btSocket.getOutputStream().write(i.getBytes());
             }
         }
         catch (Exception e) {
