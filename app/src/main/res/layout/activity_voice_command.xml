@@ -8,11 +8,30 @@
     tools:context=".VoiceCommand">
 
     <ImageView
+        android:id="@+id/ivBackVoiceCommand"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_margin="15dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/back" />
+
+    <ImageView
         android:id="@+id/voiceCommand"
         android:layout_width="170dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/downArrow"
-        android:src="@drawable/voicecommand"/>
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/voicecommand" />
+
+    <TextView
+        android:id="@+id/clickheretoactivate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/voiceCommand"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="Click here to activate voice command." />
 
 </RelativeLayout>

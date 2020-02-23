@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".VoiceCommand"></activity>
+        <activity android:name=".VoiceCommand"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".elevatorButton"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

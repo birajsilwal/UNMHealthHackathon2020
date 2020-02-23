@@ -32,14 +32,21 @@ public class VoiceCommand extends AppCompatActivity {
     private TextToSpeech tts;
     private SpeechRecognizer speechRecog;
 
-    ImageView voiceCommand;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voice_command);
 
-        voiceCommand = findViewById(R.id.voiceCommand);
+        ImageView voiceCommand = findViewById(R.id.voiceCommand);
+        ImageView ivBackVoiceCommand = findViewById(R.id.ivBackVoiceCommand);
+
+        ivBackVoiceCommand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VoiceCommand.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         voiceCommand.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,8 +186,8 @@ public class VoiceCommand extends AppCompatActivity {
                     Toast.makeText(VoiceCommand.this, getString(R.string.tts_no_engines),Toast.LENGTH_LONG).show();
                     finish();
                 } else {
-                    tts.setLanguage(Locale.US);
-                    speak("Hello there, I am ready to start our conversation");
+                    tts.setLanguage(Locale.ENGLISH);
+                    speak("Hello there.");
                 }
             }
         });
