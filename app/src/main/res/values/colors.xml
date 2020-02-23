@@ -11,5 +11,15 @@
     <color name="black">#000000</color>
 
 
+    <color name="burlywood">#D8BD8A</color>
+    <color name="burlywood1">#23D8BD8A</color>
+
+
+    <color name="gunmetal">#151C33</color>
+    <color name="gunmetal1">#80151C33</color>
+
+
+
+
 
 </resources>

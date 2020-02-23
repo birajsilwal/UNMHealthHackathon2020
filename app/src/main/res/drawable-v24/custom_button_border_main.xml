@@ -9,7 +9,7 @@
         android:color="@color/my_red_color">
     </stroke>
 
-    <solid android:color="@color/white_5_transparent"/>
+    <solid android:color="@color/gunmetal1"/>
 
 
 
