@@ -32,7 +32,6 @@ public class elevatorButton extends Activity implements OnClickListener {
     Set<BluetoothDevice> pairedDevices;
     static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +46,10 @@ public class elevatorButton extends Activity implements OnClickListener {
             }
         });
 
-        try {
-            setAction();} catch (Exception e) {}
+        try { setAction();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -102,7 +103,6 @@ public class elevatorButton extends Activity implements OnClickListener {
                 return true;
             }
         });
-
     }
 
     private void bluetooth_connect_device() throws IOException {
@@ -114,25 +114,26 @@ public class elevatorButton extends Activity implements OnClickListener {
                 for(BluetoothDevice bt : pairedDevices) {
                     address=bt.getAddress().toString();name = bt.getName().toString();
                     Toast.makeText(getApplicationContext(),"Connected", Toast.LENGTH_SHORT).show();
-
                 }
             }
         }
+
         catch(Exception we){}
-        myBluetooth = BluetoothAdapter.getDefaultAdapter();//get the mobile bluetooth device
-        BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
-        btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
+        //get the mobile bluetooth device
+        myBluetooth = BluetoothAdapter.getDefaultAdapter();
+        //connects to the device's address and checks if it's available
+        BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);
+        //create a RFCOMM (SPP) connection
+        btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);
         btSocket.connect();
+
         try { t1.setText("BT Name: "+name+"\nBT Address: "+address); }
         catch(Exception e){}
     }
 
     @Override
     public void onClick(View v) {
-        try
-        {
-
-        }
+        try { }
         catch (Exception e) {
             Toast.makeText(getApplicationContext(),e.getMessage(), Toast.LENGTH_SHORT).show();
         }

@@ -11,9 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button elevatorButton;
-    TextView userNumber, setUserInput;
-    ImageView upArrow, downArrow;
+    private TextView userNumber, setUserInput;
+    private ImageView voiceCommand;
 
     int current = 0;
 
@@ -22,12 +21,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        elevatorButton = findViewById(R.id.elevatorButton);
-        upArrow = findViewById(R.id.upArrow);
-        downArrow = findViewById(R.id.downArrow);
+        Button elevatorButton = findViewById(R.id.elevatorButton);
+        ImageView upArrow = findViewById(R.id.upArrow);
+        ImageView downArrow = findViewById(R.id.downArrow);
 
         userNumber = findViewById(R.id.userNumber);
+        voiceCommand = findViewById(R.id.voiceCommand);
 
+        voiceCommand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(MainActivity.this, VoiceCommand.class);
+                startActivity(intent);
+            }
+        });
 
         elevatorButton = findViewById(R.id.elevatorButton);
 
@@ -47,13 +54,11 @@ public class MainActivity extends AppCompatActivity {
     public void counterUp(View view) {
         current++;
         userNumber.setText(Integer.toString(current));
-
     }
 
     public void counterDown(View view) {
         current--;
         userNumber.setText(Integer.toString(current));
-
     }
 
     public void setUserInput(View view) {
