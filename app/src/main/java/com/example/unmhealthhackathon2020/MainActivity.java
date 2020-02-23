@@ -58,7 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void setUserInput(View view) {
 
-        if (current == 1) {
+        if (current == 0) {
+            setUserInput.setText("Chill, you're not going anywhere :D");
+            setUserInput.setTextSize(25);
+        }
+        else if (current == 1) {
             setUserInput.setText("You're going to " + current + "st floor.");
         }
         else if (current == 2) {

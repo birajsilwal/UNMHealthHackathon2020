@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    tools:context=".elevatorButton" >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +16,6 @@
             android:id="@+id/extra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
 
             <Button
                 android:id="@+id/button1"
@@ -83,8 +83,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="82dp"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="1"
+
                 android:textSize="50dp" />
 
 
@@ -96,7 +98,8 @@
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="82dp"
                 android:layout_toRightOf="@id/one"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="2"
                 android:textSize="50dp" />
 
@@ -106,7 +109,8 @@
                 android:layout_height="70dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="3"
                 android:layout_below="@+id/one"
                 android:textSize="50dp" />
@@ -118,7 +122,8 @@
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
                 android:layout_toRightOf="@id/three"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="4"
                 android:layout_below="@+id/two"
                 android:textSize="50dp" />
@@ -129,7 +134,8 @@
                 android:layout_height="70dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="5"
                 android:layout_below="@+id/three"
                 android:textSize="50dp" />
@@ -141,7 +147,8 @@
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
                 android:layout_toRightOf="@id/five"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="6"
                 android:layout_below="@+id/four"
                 android:textSize="50dp" />
@@ -152,7 +159,8 @@
                 android:layout_height="70dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="7"
                 android:layout_below="@+id/five"
                 android:textSize="50dp" />
@@ -164,7 +172,8 @@
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
                 android:layout_toRightOf="@id/seven"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="8"
                 android:layout_below="@+id/six"
                 android:textSize="50dp" />
@@ -176,7 +185,8 @@
                 android:layout_height="70dp"
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="9"
                 android:layout_below="@+id/seven"
                 android:textSize="50dp" />
@@ -188,11 +198,11 @@
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
                 android:layout_toRightOf="@id/nine"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_button_border"
+                android:textColor="@color/burlywood"
                 android:text="10"
                 android:layout_below="@+id/eight"
                 android:textSize="50dp" />
-
         </RelativeLayout>
 
         <RelativeLayout
@@ -208,8 +218,8 @@
                 android:layout_height="70dp"
                 android:layout_marginStart="90dp"
                 android:layout_toRightOf="@id/up"
-                android:background="@drawable/custom_button_border"
-                app:srcCompat="@drawable/down" />
+                android:background="@drawable/custom_elevator_extrabutton_border"
+                app:srcCompat="@mipmap/ic_down_foreground" />
 
             <ImageView
                 android:id="@+id/up"
@@ -217,7 +227,7 @@
                 android:layout_height="70dp"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="90dp"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_extrabutton_border"
                 app:srcCompat="@drawable/up" />
 
             <ImageView
@@ -228,7 +238,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_toRightOf="@id/open"
                 android:layout_below="@id/down"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_extrabutton_border"
                 android:padding="10dp"
                 app:srcCompat="@drawable/close" />
 
@@ -240,7 +250,7 @@
                 android:layout_marginStart="90dp"
                 android:layout_marginTop="50dp"
                 android:layout_below="@id/up"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_extrabutton_border"
                 android:padding="10dp"
                 app:srcCompat="@drawable/open" />
 
@@ -253,12 +263,10 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="20dp"
                 android:layout_below="@id/open"
-                android:background="@drawable/custom_button_border"
+                android:background="@drawable/custom_elevator_extrabutton_border"
                 android:padding="10dp"
                 app:srcCompat="@drawable/emergency" />
 
         </RelativeLayout>
     </RelativeLayout>
-
-
 </ScrollView>

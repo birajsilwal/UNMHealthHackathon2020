@@ -29,25 +29,36 @@
         android:textSize="20sp"
         android:background="@drawable/custom_button_border_main"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textSize="40sp"
+        android:textColor="@color/loboGrey"
+        android:layout_below="@id/elevatorButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
     <ImageView
         android:id="@+id/upArrow"
-        android:layout_width="40dp"
-        android:layout_height="45dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/userNumber"
         android:layout_marginTop="10dp"
         android:onClick="counterUp"
-        android:src="@drawable/uparrow" />
+        android:src="@drawable/elevup" />
 
     <ImageView
         android:id="@+id/downArrow"
-        android:layout_width="40dp"
-        android:layout_height="45dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/upArrow"
         android:layout_marginTop="10dp"
         android:onClick="counterDown"
-        android:src="@drawable/downarrow" />
+        android:src="@drawable/elevdown" />
 
     <TextView
         android:id="@+id/userNumber"
@@ -60,62 +71,28 @@
         android:textColor="@color/black"
         android:textSize="55sp" />
 
-    <LinearLayout
-        android:id="@+id/ccButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/downArrow">
-
-        <Space
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
-
-
-        <Button
-            android:id="@+id/conform"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="conform"
-            android:layout_marginTop="15dp"
-            android:onClick="setUserInput"
-            android:layout_below="@+id/downArrow"/>
-
-        <Space
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
-
-
-        <Button
-            android:id="@+id/cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="cancel"
-            android:layout_marginTop="15dp"
-            android:layout_centerHorizontal="true"
-            android:layout_toRightOf="@id/conform"
-            android:layout_below="@+id/downArrow"/>
-
-        <Space
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
-
-
-    </LinearLayout>
-
+    <ImageView
+        android:id="@+id/conform"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:text="conform"
+        android:layout_marginTop="15dp"
+        android:onClick="setUserInput"
+        android:layout_below="@+id/downArrow"
+        android:src="@drawable/enter"
+        android:layout_centerHorizontal="true"/>
 
 
     <TextView
         android:id="@+id/setUserInput"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:layout_below="@+id/ccButtons"
+        android:layout_below="@+id/conform"
         android:layout_centerHorizontal="true"
         android:textColor="@color/black"
         android:textSize="30sp"
+        android:textAlignment="center"
         android:layout_marginTop="20dp"
         />
 
